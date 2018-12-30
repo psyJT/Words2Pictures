@@ -423,7 +423,7 @@ Pushbutton_FontSetBox_Height = 20;
 Btn_FontSet = uicontrol('Parent',hPanel2_SetParameters,'Style','pushbutton', 'Position',[Pushbutton_FontSetBox_relativeX Pushbutton_FontSetBox_relativeY Pushbutton_FontSetBox_Width Pushbutton_FontSetBox_Height], 'String','Font Select', 'fontsize',10, 'Visible','on');
 
 % --- initialize the default Font parameters, load these default parameters, if press cancel -------
-sFont.FontName = 'Microsoft Yahei';
+sFont.FontName = 'Arial';
 sFont.FontSize = 36;
 sFont.FontUnits = 'normalized';
 sFont.FontWeight = 'normal';
@@ -479,8 +479,7 @@ set(Btn_FontSet, 'Callback', @Btn_FontSelectFcn);
     end   % end of function Default_Btn_FontSelectFcn
 
 % get the string of font set
-
-InitialFontString = sprintf('Name:%s; Style:%s; Size:%d', 'Microsoft Yahei', 'normal',36);
+InitialFontString = sprintf('Name:%s; Style:%s; Size:%d', 'Arial', 'normal',36);
 set(Edit_FontSet, 'String', InitialFontString);
 FontSet_FlashCardString = get(Edit_FontSet, 'String');
 
@@ -1208,7 +1207,7 @@ imgMatrix_mentalR(:,:,1) = 255;
 imgMatrix_mentalR(:,:,2) = 255;
 imgMatrix_mentalR(:,:,3) = 255;
 imgMatrix_mentalR_Uint8 = uint8(imgMatrix_mentalR);
-imgMatrix_mentalR_Uint8_mentalR = insertText(imgMatrix_mentalR_Uint8, [R_Width/2 R_Height/2], 'R', 'Font','Times','AnchorPoint','Center', 'BoxColor',[255 255 255], 'TextColor', R_FontColor, 'FontSize',60, 'TextColor',[160 160 160]);
+imgMatrix_mentalR_Uint8_mentalR = insertText(imgMatrix_mentalR_Uint8, [R_Width/2 R_Height/2], 'R', 'Font','Arial','AnchorPoint','Center', 'BoxColor',[255 255 255], 'TextColor', R_FontColor, 'FontSize',60, 'TextColor',[160 160 160]);
 % insertedpic = insertText(cBKGCanvas, pt_word, cWord, 'AnchorPoint','Center','BoxColor',bkgColor,'FontSize',30, 'TextColor',cFontColor);
 
 % show the image matrix
@@ -1265,7 +1264,7 @@ imshow(imgMatrix_mentalR_Uint8_mentalR,'parent',hAxes_mentalR);
 %         imgMatrix_mentalR = ones(R_Height, R_Width, 3);
 %         imgMatrix_mentalR_Uint8 = uint8(imgMatrix_mentalR);
         
-        imgMatrix_mentalR_Uint8_mentalR = insertText(imgMatrix_mentalR_Uint8, [R_Width/2 R_Height/2], 'R', 'Font','Times','AnchorPoint','Center', 'BoxColor',[255 255 255], 'TextColor', R_FontColor, 'FontSize',60, 'TextColor',[160 160 160]);
+        imgMatrix_mentalR_Uint8_mentalR = insertText(imgMatrix_mentalR_Uint8, [R_Width/2 R_Height/2], 'R', 'Font','Arial','AnchorPoint','Center', 'BoxColor',[255 255 255], 'TextColor', R_FontColor, 'FontSize',60, 'TextColor',[160 160 160]);
     end    % end of function for mentalR rotation
 
 
